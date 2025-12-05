@@ -1,0 +1,97 @@
+<!-- res/values/strings.xml (Español por defecto) -->
+<resources>
+    <string name="app_name">FlowDaily</string>
+
+    <!-- Login Screen -->
+    <string name="welcome_back">¡Bienvenido de nuevo!</string>
+    <string name="login_subtitle">Inicia sesión para continuar</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="no_account">¿No tienes cuenta?</string>
+    <string name="register_here">Regístrate aquí</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+
+    <!-- Register Screen -->
+    <string name="create_account">Crear cuenta</string>
+    <string name="register_subtitle">Regístrate para comenzar</string>
+    <string name="name">Nombre completo</string>
+    <string name="phone">Teléfono</string>
+    <string name="register">Registrarse</string>
+    <string name="already_have_account">¿Ya tienes cuenta?</string>
+    <string name="login_here">Inicia sesión aquí</string>
+
+    <!-- Home Screen -->
+    <string name="home">Inicio</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="hello">Hola</string>
+    <string name="your_tools">Tus herramientas diarias</string>
+    <string name="organization">Organización</string>
+    <string name="organization_subtitle">Tareas y Objetivos</string>
+    <string name="expenses">Gastos</string>
+    <string name="expenses_subtitle">Control de finanzas</string>
+    <string name="transport">Transporte</string>
+    <string name="transport_subtitle">Rutas y optimización</string>
+    <string name="attendance">Asistencia Personal</string>
+    <string name="attendance_subtitle">Recordatorios y notas</string>
+
+    <!-- Profile Screen -->
+    <string name="profile">Perfil</string>
+    <string name="your_information">Tu información</string>
+    <string name="member_since">Miembro desde</string>
+    <string name="personal_information">Información personal</string>
+    <string name="not_registered">No registrado</string>
+    <string name="options">Opciones</string>
+    <string name="settings">Configuración</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="logout_confirmation">¿Estás seguro de que quieres cerrar sesión?</string>
+    <string name="yes">Sí</string>
+    <string name="cancel">Cancelar</string>
+    <string name="back">Volver</string>
+
+    <!-- Settings Screen -->
+    <string name="customize_experience">Personaliza tu experiencia</string>
+    <string name="appearance">Apariencia</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="dark_mode_description">Tema oscuro para la aplicación</string>
+    <string name="general">General</string>
+    <string name="language">Idioma</string>
+    <string name="about">Acerca de</string>
+    <string name="app_info">Información de la app</string>
+    <string name="select_language">Seleccionar idioma</string>
+    <string name="spanish">Español</string>
+    <string name="english">English</string>
+    <string name="close">Cerrar</string>
+
+    <!-- About Dialog -->
+    <string name="version">Versión 1.0.0</string>
+    <string name="developers">Desarrolladoras:</string>
+    <string name="last_update">Última actualización: Noviembre 2025</string>
+    <string name="about_description">Esta aplicación fue creada con fines académicos por alumnas de la carrera de Desarrollo de Software Multiplataforma en la universidad UTNG.</string>
+
+    <!-- Organization Screen -->
+    <string name="tasks">Tareas</string>
+    <string name="add_task">Agregar tarea</string>
+    <string name="no_tasks">No hay tareas</string>
+
+    <!-- Expenses Screen -->
+    <string name="my_expenses">Mis gastos</string>
+    <string name="add_expense">Agregar gasto</string>
+    <string name="no_expenses">No hay gastos registrados</string>
+
+    <!-- Transport Screen -->
+    <string name="my_routes">Mis rutas</string>
+    <string name="add_route">Agregar ruta</string>
+
+    <!-- Attendance Screen -->
+    <string name="check_in">Registrar entrada</string>
+    <string name="check_out">Registrar salida</string>
+
+    <!-- Common -->
+    <string name="loading">Cargando...</string>
+    <string name="error">Error</string>
+    <string name="success">Éxito</string>
+    <string name="save">Guardar</string>
+    <string name="delete">Eliminar</string>
+    <string name="edit">Editar</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "979897562456",
+    "project_id": "flowdaily-ea55c",
+    "storage_bucket": "flowdaily-ea55c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979897562456:android:f0582c3b40e52bab1b612d",
+        "android_client_info": {
+          "package_name": "com.clmg.applicationflowdaily"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl9V2BixE8Fgy3gfjxaLulzHHA2QzObME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
