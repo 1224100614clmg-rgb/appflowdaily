@@ -2,36 +2,54 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- ✅ Permisos para notificaciones -->
+    <!-- ========== PERMISOS DE NOTIFICACIONES ========== -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <!-- ✅ Permisos para alarmas exactas (Android 12+) -->
+    <!-- ========== PERMISOS PARA ALARMAS EXACTAS (Android 12+) ========== -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
 
-    <!-- ✅ Permisos para funcionar en segundo plano -->
+    <!-- ========== PERMISOS PARA FUNCIONAR EN SEGUNDO PLANO ========== -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-    <!-- ✅ Permiso para vibración en notificaciones -->
     <uses-permission android:name="android.permission.VIBRATE" />
 
-    <!-- ✅ Internet para cargar mapas -->
+    <!-- ========== PERMISOS DE INTERNET Y RED ========== -->
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- ✅ Necesario para Google Play Services -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-    <!-- ✅ Permisos de ubicación para Google Maps -->
+    <!-- ========== PERMISOS DE UBICACIÓN (GPS) PARA GOOGLE MAPS ========== -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-    <!-- ✅ Para Android 10+ -->
+    <!-- Para Android 10+ (ubicación de medios) -->
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
 
-    <!-- ✅ Hardware feature para GPS (no requerido obligatorio) -->
+    <!-- ========== PERMISOS DE ALMACENAMIENTO ========== -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+
+    <!-- Para Android 13+ (API 33+) -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <!-- ========== PERMISOS DE CÁMARA (opcional) ========== -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- ========== CARACTERÍSTICAS DEL DISPOSITIVO ========== -->
     <uses-feature
         android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="false" />
 
     <application
@@ -43,26 +61,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ApplicationFlowDaily">
+        android:theme="@style/Theme.ApplicationFlowDaily"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
 
-        <!-- ✅ API KEY de Google Maps (viene del build.gradle) -->
+        <!-- ========== API KEY DE GOOGLE MAPS ========== -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${GOOGLE_MAPS_API_KEY}" />
 
-        <!-- ✅ Activity Principal -->
+        <!-- ========== VERSIÓN DE GOOGLE PLAY SERVICES ========== -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- ========== ACTIVIDAD PRINCIPAL ========== -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ApplicationFlowDaily">
+            android:theme="@style/Theme.ApplicationFlowDaily"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- ✅ BroadcastReceiver para las notificaciones de recordatorios -->
+        <!-- ========== BROADCASTRECEIVER PARA NOTIFICACIONES DE RECORDATORIOS ========== -->
         <receiver
             android:name=".data.notificacion.ReminderBroadcastReceiver"
             android:enabled="true"

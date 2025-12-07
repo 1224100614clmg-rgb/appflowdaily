@@ -11,6 +11,7 @@ data class TransportModel(
     val destinationLat: Double = 0.0,
     val destinationLng: Double = 0.0,
     val distanceKm: Double = 0.0,
+    val durationMinutes: Int = 0, // ✅ Tiempo real de Google Maps
     val timestamp: Long = System.currentTimeMillis(),
     val notes: String = ""
 )

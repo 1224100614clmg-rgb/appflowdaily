@@ -22,6 +22,12 @@ class TransportViewModel(
     private val _distanceKm = MutableStateFlow(0.0)
     val distanceKm: StateFlow<Double> = _distanceKm
 
+    private val _durationMinutes = MutableStateFlow(0)
+    val durationMinutes: StateFlow<Int> = _durationMinutes
+
+    private val _routePolyline = MutableStateFlow<List<LatLng>>(emptyList())
+    val routePolyline: StateFlow<List<LatLng>> = _routePolyline
+
     private val _transportRecords = MutableStateFlow<List<TransportModel>>(emptyList())
     val transportRecords: StateFlow<List<TransportModel>> = _transportRecords
 
@@ -37,6 +43,8 @@ class TransportViewModel(
     private val _saveSuccess = MutableStateFlow(false)
     val saveSuccess: StateFlow<Boolean> = _saveSuccess
 
+
+
     init {
         loadUserRecords()
         loadTotalDistance()
@@ -44,22 +52,41 @@ class TransportViewModel(
 
     fun setOrigin(point: LatLng) {
         _origin.value = point
-        calculate()
+        calculateRealRoute()
     }
 
     fun setDestination(point: LatLng) {
         _destination.value = point
-        calculate()
+        calculateRealRoute()
     }
 
-    private fun calculate() {
+    // ✅ Calcular ruta REAL usando Google Directions API
+    private fun calculateRealRoute() {
         val o = _origin.value
         val d = _destination.value
 
         if (o != null && d != null) {
             viewModelScope.launch {
-                val dist = repository.calculateDistance(o, d)
-                _distanceKm.value = dist
+                _isLoading.value = true
+                _errorMessage.value = null
+
+                val result = repository.calculateRealRoute(o, d)
+
+                result.onSuccess { routeInfo ->
+                    _distanceKm.value = routeInfo.distanceKm
+                    _durationMinutes.value = routeInfo.durationMinutes
+                    _routePolyline.value = routeInfo.polylinePoints
+                    android.util.Log.d("TRANSPORT", "✅ Ruta calculada: ${routeInfo.distanceKm} km, ${routeInfo.durationMinutes} min")
+                }.onFailure { exception ->
+                    _errorMessage.value = "Error al calcular ruta: ${exception.message}"
+                    // Fallback a cálculo lineal
+                    _distanceKm.value = repository.calculateDistance(o, d)
+                    _durationMinutes.value = (_distanceKm.value / 40.0 * 60).toInt()
+                    _routePolyline.value = emptyList()
+                    android.util.Log.e("TRANSPORT", "❌ Usando cálculo lineal como fallback")
+                }
+
+                _isLoading.value = false
             }
         }
     }
@@ -81,6 +108,7 @@ class TransportViewModel(
                 origin = o,
                 destination = d,
                 distanceKm = _distanceKm.value,
+                durationMinutes = _durationMinutes.value,
                 notes = notes
             )
 
@@ -142,6 +170,8 @@ class TransportViewModel(
         _origin.value = null
         _destination.value = null
         _distanceKm.value = 0.0
+        _durationMinutes.value = 0
+        _routePolyline.value = emptyList()
     }
 
     fun clearSaveSuccess() {
