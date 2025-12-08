@@ -1028,6 +1028,63 @@ fun TransportRecordCard(
     }
 }
 
+Centraliza la configuración de Firebase en un único módulo (FirebaseModule) que:
+- Inicializa Firestore y Auth con instancias únicas (patrón singleton).
+
+package com.clmg.applicationflowdaily.data.firestore
+
+import android.util.Log
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+
+// FirebaseModule que centraliza y gestiona las instancias de Firebase:
+// > Proporciona acceso global y lazy a FirebaseFirestore y FirebaseAuth
+// > Implementa patrón singleton para instancias únicas en toda la app
+// > Incluye funciones helper para obtener información del usuario autenticado
+// > Agrega logging detallado para diagnóstico y debugging
+// > Sirve como punto único de configuración para servicios de Firebase
+
+object FirebaseModule {
+
+    private const val TAG = "FirebaseModule"
+
+    val db: FirebaseFirestore by lazy {
+        FirebaseFirestore.getInstance().apply {
+            Log.d(TAG, "✅ Firestore inicializado")
+        }
+    }
+
+    val auth: FirebaseAuth by lazy {
+        FirebaseAuth.getInstance().apply {
+            Log.d(TAG, "✅ Auth inicializado")
+        }
+    }
+
+    fun getCurrentUserId(): String? {
+        val currentUser = auth.currentUser
+        val userId = currentUser?.uid
+
+        Log.d(TAG, "=================================")
+        Log.d(TAG, "🔑 getCurrentUserId() llamado")
+        Log.d(TAG, "🔑 FirebaseAuth.currentUser: $currentUser")
+        Log.d(TAG, "🔑 User ID: $userId")
+        Log.d(TAG, "🔑 Email: ${currentUser?.email}")
+        Log.d(TAG, "🔑 Autenticado: ${userId != null}")
+        Log.d(TAG, "=================================")
+
+        return userId
+    }
+
+    fun isUserAuthenticated(): Boolean {
+        val isAuth = auth.currentUser != null
+        Log.d(TAG, "✅ Usuario autenticado: $isAuth")
+        return isAuth
+    }
+
+    fun getCurrentUserEmail(): String? {
+        return auth.currentUser?.email
+    }
+}
 
 
 
