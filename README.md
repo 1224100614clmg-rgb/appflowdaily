@@ -1,143 +1,132 @@
-📱 Manual Completo – FlowDaily
-📝 Resumen
+# 📱 Manual Completo – FlowDaily
 
-FlowDaily es una aplicación diseñada para ayudar a las personas con sus rutinas diarias. Permite registrar, organizar y visualizar actividades importantes como transporte, gastos, tareas, recordatorios y hábitos.
+## 📝 Resumen
+FlowDaily es una aplicación diseñada para ayudar a las personas con sus rutinas diarias.  
+Permite registrar, organizar y visualizar actividades importantes como transporte, gastos, tareas, recordatorios y hábitos.  
+
 En pocas palabras, FlowDaily ayuda a mejorar el control y la eficiencia de las actividades diarias mediante un registro claro, moderno y estructurado.
 
-✨ Características Principales
+---
+
+## ✨ Características Principales
+- Autenticación con Firebase (email/contraseña)  
+- CRUD completo de proyectos  
+- Notificaciones push  
+- Transporte (rutas diarias)  
+- Organización (checklist)  
+- Gastos (registro de gastos diarios)  
+
+---
+
+## 🛠 Tecnologías Utilizadas
+- Kotlin  
+- Jetpack Compose  
+- Material 3  
+- Map Compose (Google Maps)  
+- Firebase Authentication  
+- Firebase Firestore  
+- Firebase Storage (fotos de perfil)  
+
+---
+
+## 🔧 Funcionalidades Principales
+
+### 🔐 Autenticación
+- Registro de nuevos usuarios con email y contraseña  
+- Inicio de sesión para usuarios registrados  
+- Gestión de sesión persistente  
+
+### 🚗 Transporte
+- Guardar rutas diarias  
+- Calcular kilómetros recorridos  
+- Calcular minutos aproximados  
+- Registrar fecha de realización  
+
+### 🗂 Organización
+- Registrar tareas pendientes  
+- Marcar tareas como realizadas o pendientes  
+- Calcular progreso total (100% cuando todas son realizadas)  
+
+### 💰 Gastos
+- Registrar dinero disponible  
+- Registrar gastos con monto y categoría  
+- Descontar automáticamente del saldo disponible  
+- Registrar fecha y hora de cada gasto  
+
+### 🔔 Asistencia Personal
+- Registrar recordatorios con descripción y categoría  
+- Guardar fecha y hora del recordatorio  
+- Enviar notificaciones al usuario  
+- Mostrar cantidad de recordatorios existentes  
+
+### 👤 Perfil del Usuario
+- Ver datos personales  
+- Editar nombre, email, teléfono y foto  
+- Ver fecha de creación de la cuenta  
+
+### ⚙ Configuración
+- Activar / desactivar modo oscuro  
+- Cambiar idioma (ES/EN)  
+- Cerrar sesión  
+
+### 🟥 Prioridades
+- Sistema de prioridades: Alta, Media y Baja  
+- Indicadores visuales para diferenciar cada prioridad  
+
+---
+
+## 🔄 ¿Cómo Funciona y Quién lo Hizo? (Flujo General)
+1. El usuario abre la app → Pantalla Splash  
+2. Verificación automática de sesión  
+3. Login o Registro  
+4. Pantalla Home (acceso a todos los módulos)  
+5. Navegación hacia:  
+   - Transporte  
+   - Gastos  
+   - Tareas  
+   - Recordatorios  
+   - Asistencia  
+   - Perfil  
+   - Configuración  
+6. Todas las acciones se guardan y sincronizan con Firebase  
+
+---
+
+## 👥 Integrantes
+- Colin Cardenas Kelly Anahi  
+- Mendez Galvan Claudia Lizbeth  
+
+---
+# 🎥 Video de YouTube – FlowDaily
+
+## 📌 Información
+Este repositorio incluye un recurso audiovisual relacionado con **FlowDaily**.  
+El video explica y muestra el funcionamiento general de la aplicación, sus características principales y cómo utilizarla de manera eficiente.
+
+---
+
+## 🔗 Enlace al Video
+Puedes ver el contenido completo en YouTube aquí:  
+[👉 Ver Video](https://youtu.be/721Orkad5Tk?si=regTNXJFYAsZ2__E)
 
-Autenticación con Firebase (email/contraseña)
+---
+# 📘 Manual Completo – FlowDaily
 
-CRUD completo de proyectos
+## 📌 Información
+Este repositorio incluye el **Manual Completo** de la aplicación **FlowDaily**.  
+El manual contiene la documentación detallada sobre el uso de la app, sus módulos principales y las instrucciones necesarias para aprovechar todas sus funcionalidades.
 
-Notificaciones push
+---
 
-Transporte (rutas diarias)
+## 🔗 Enlace al Manual
+Puedes acceder al documento completo en Google Drive aquí:  
+[👉 Ver Manual Completo](https://drive.google.com/drive/folders/1lipfKdzfAjJWduT0_KrKS_duBAIE3-t1?usp=sharing)
 
-Organización (checklist)
 
-Gastos (registro de gastos diarios)
+---
 
-🛠 Tecnologías Utilizadas
-
-Kotlin
-
-Jetpack Compose
-
-Material 3
-
-Map Compose (Google Maps)
-
-Firebase Authentication
-
-Firebase Firestore
-
-Firebase Storage (fotos de perfil)
-
-🔧 Funcionalidades Principales
-🔐 Autenticación
-
-Registro de nuevos usuarios con email y contraseña
-
-Inicio de sesión para usuarios registrados
-
-Gestión de sesión persistente
-
-🚗 Transporte
-
-Guardar rutas diarias
-
-Calcular kilómetros recorridos
-
-Calcular minutos aproximados
-
-Registrar fecha de realización
-
-🗂 Organización
-
-Registrar tareas pendientes
-
-Marcar tareas como realizadas o pendientes
-
-Calcular progreso total (100% cuando todas son realizadas)
-
-💰 Gastos
-
-Registrar dinero disponible
-
-Registrar gastos con monto y categoría
-
-Descontar automáticamente del saldo disponible
-
-Registrar fecha y hora de cada gasto
-
-🔔 Asistencia Personal
-
-Registrar recordatorios con descripción y categoría
-
-Guardar fecha y hora del recordatorio
-
-Enviar notificaciones al usuario
-
-Mostrar cantidad de recordatorios existentes
-
-👤 Perfil del Usuario
-
-Ver datos personales
-
-Editar nombre, email, teléfono y foto
-
-Ver fecha de creación de la cuenta
-
-⚙ Configuración
-
-Activar / desactivar modo oscuro
-
-Cambiar idioma (ES/EN)
-
-Cerrar sesión
-
-🟥 Prioridades
-
-Sistema de prioridades: Alta, Media y Baja
-
-Indicadores visuales para diferenciar cada prioridad
-
-🔄 ¿Cómo Funciona y Quién lo Hizo? (Flujo General)
-
-El usuario abre la app → Pantalla Splash
-
-Verificación automática de sesión
-
-Login o Registro
-
-Pantalla Home (acceso a todos los módulos)
-
-Navegación hacia:
-
-Transporte
-
-Gastos
-
-Tareas
-
-Recordatorios
-
-Asistencia
-
-Perfil
-
-Configuración
-
-Todas las acciones se guardan y sincronizan con Firebase
-
-👥 Integrantes
-
-Colin Cardenas Kelly Anahi
-
-Mendez Galvan Claudia Lizbeth
-
-📁 Estructura de Archivos
+## 📁 Estructura de Archivos
+```bash
 app/
 │
 ├─ manifests/
@@ -208,42 +197,418 @@ app/
 │
 ├─ MainActivity.kt
 └─ MainApplication.kt
+# ✅ ExpenseViewModel.kt
 
-📍 TransportScreen.kt — Documentación y Código Completo
-📝 Descripción General
+## 📌 Explicación
+Este **ViewModel** maneja toda la lógica relacionada con:
 
-TransportScreen.kt es una de las pantallas más completas y avanzadas de FlowDaily.
-Esta pantalla permite:
+- 💰 Gastos  
+- 💵 Balance  
+- ⏳ Estados de carga  
+- ⚠️ Errores  
+- ✅ Mensajes de éxito  
 
-Seleccionar una ruta en Google Maps (origen y destino).
+Su función principal es **coordinar las operaciones entre la UI y el repositorio**, asegurando que los datos se gestionen de manera reactiva y eficiente.
 
-Calcular distancia y duración estimada.
+---
 
-Guardar rutas con notas personalizadas.
+## 🛠 Funcionalidades Clave
+- Cargar lista de gastos desde el repositorio.  
+- Cargar balance actual del usuario.  
+- Guardar, actualizar y eliminar gastos.  
+- Guardar balance inicial o actualizado.  
+- Manejo de estados de carga (`loading`).  
+- Manejo de errores (`error`).  
+- Mensajes de éxito (`operationSuccess`).  
+- Limpieza de estados (`clearError`, `clearSuccess`).  
 
-Ver un historial de rutas previas.
+---
 
-Mostrar métricas como distancia total y tiempo acumulado.
+## 📂 Código: `ExpenseViewModel.kt`
 
-Reutilizar rutas almacenadas para visualizarlas nuevamente en el mapa.
+```kotlin
+package com.clmg.applicationflowdaily.ui.viewmodel
 
-Este módulo utiliza:
+import android.util.Log
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.clmg.applicationflowdaily.data.models.BalanceModel
+import com.clmg.applicationflowdaily.data.models.ExpenseModel
+import com.clmg.applicationflowdaily.data.repository.ExpenseRepository
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 
-Jetpack Compose
+class ExpenseViewModel : ViewModel() {
 
-Google Maps Compose
+    private val repository = ExpenseRepository()
 
-MVVM con TransportViewModel
+    private val _expenses = MutableStateFlow<List<ExpenseModel>>(emptyList())
+    val expenses: StateFlow<List<ExpenseModel>> = _expenses.asStateFlow()
 
-Firebase Firestore
+    private val _balance = MutableStateFlow<BalanceModel?>(null)
+    val balance: StateFlow<BalanceModel?> = _balance.asStateFlow()
 
-Permisos dinámicos
+    private val _loading = MutableStateFlow(false)
+    val loading: StateFlow<Boolean> = _loading.asStateFlow()
 
-Animaciones de cámara
+    private val _error = MutableStateFlow<String?>(null)
+    val error: StateFlow<String?> = _error.asStateFlow()
 
-UI moderna con Material 3
+    private val _operationSuccess = MutableStateFlow<String?>(null)
+    val operationSuccess: StateFlow<String?> = _operationSuccess.asStateFlow()
 
-📌 Código Completo: TransportScreen.kt
+    companion object {
+        private const val TAG = "ExpenseViewModel"
+    }
+
+    init {
+        loadExpenses()
+        loadBalance()
+    }
+
+    fun loadExpenses() {
+        viewModelScope.launch {
+            try {
+                _loading.value = true
+                _error.value = null
+
+                repository.getExpenses().fold(
+                    onSuccess = { _expenses.value = it },
+                    onFailure = { _error.value = it.message }
+                )
+            } finally {
+                _loading.value = false
+            }
+        }
+    }
+
+    fun loadBalance() {
+        viewModelScope.launch {
+            try {
+                repository.getBalance().fold(
+                    onSuccess = { _balance.value = it },
+                    onFailure = { Log.e(TAG, "Error balance: ${it.message}") }
+                )
+            } catch (_: Exception) {}
+        }
+    }
+
+    fun saveExpense(expense: ExpenseModel, onSuccess: () -> Unit = {}) {
+        viewModelScope.launch {
+            try {
+                _loading.value = true
+                _error.value = null
+
+                repository.saveExpense(expense).fold(
+                    onSuccess = {
+                        _operationSuccess.value = "Gasto guardado"
+                        loadExpenses()
+                        onSuccess()
+                    },
+                    onFailure = { _error.value = it.message }
+                )
+            } finally { _loading.value = false }
+        }
+    }
+
+    fun updateExpense(expense: ExpenseModel, onSuccess: () -> Unit = {}) {
+        viewModelScope.launch {
+            try {
+                _loading.value = true
+
+                repository.updateExpense(expense).fold(
+                    onSuccess = {
+                        _operationSuccess.value = "Gasto actualizado"
+                        loadExpenses()
+                        onSuccess()
+                    },
+                    onFailure = { _error.value = it.message }
+                )
+            } finally { _loading.value = false }
+        }
+    }
+
+    fun deleteExpense(expenseId: String, onSuccess: () -> Unit = {}) {
+        viewModelScope.launch {
+            try {
+                _loading.value = true
+
+                repository.deleteExpense(expenseId).fold(
+                    onSuccess = {
+                        _operationSuccess.value = "Gasto eliminado"
+                        loadExpenses()
+                        onSuccess()
+                    },
+                    onFailure = { _error.value = it.message }
+                )
+            } finally { _loading.value = false }
+        }
+    }
+
+    fun saveBalance(balanceInicial: Double, onSuccess: () -> Unit = {}) {
+        viewModelScope.launch {
+            try {
+                _loading.value = true
+
+                val balanceModel = BalanceModel(balanceInicial = balanceInicial)
+
+                repository.saveBalance(balanceModel).fold(
+                    onSuccess = {
+                        _operationSuccess.value = "Balance actualizado"
+                        loadBalance()
+                        onSuccess()
+                    },
+                    onFailure = { _error.value = it.message }
+                )
+            } finally { _loading.value = false }
+        }
+    }
+
+    fun clearError() {
+        _error.value = null
+    }
+
+    fun clearSuccess() {
+        _operationSuccess.value = null
+    }
+}
+
+# ✅ ExpenseModel.kt
+
+## 📌 Explicación
+Este archivo contiene los **modelos de datos** usados en el módulo de **Finanzas**:
+
+- **ExpenseModel** → Representa un gasto o ingreso.  
+- **BalanceModel** → Representa el balance inicial del usuario.  
+
+Ambos modelos están diseñados para integrarse con **Firebase Firestore** y permiten:  
+- 📊 Ordenamiento de registros.  
+- 📝 Registro de gastos/ingresos.  
+- ⏱️ Análisis temporal mediante `timestamp` y `fecha`.  
+
+---
+
+## 🛠 Funcionalidades Clave
+- **ExpenseModel**  
+  - ID único del gasto.  
+  - Usuario asociado (`userId`).  
+  - Monto y descripción.  
+  - Categoría del gasto.  
+  - Fecha y hora del registro.  
+  - Tipo de movimiento (`GASTO` o `INGRESO`).  
+  - Emoji representativo.  
+  - Timestamp para ordenamiento temporal.  
+
+- **BalanceModel**  
+  - ID fijo (`balance_inicial`).  
+  - Usuario asociado (`userId`).  
+  - Balance inicial del usuario.  
+  - Timestamp para control histórico.  
+
+---
+
+## 📂 Código: `ExpenseModel.kt`
+
+```kotlin
+package com.clmg.applicationflowdaily.data.models
+
+data class ExpenseModel(
+    val id: String = "",
+    val userId: String = "",
+    val monto: Double = 0.0,
+    val descripcion: String = "",
+    val categoria: String = "",
+    val fecha: Long = System.currentTimeMillis(),
+    val tipo: String = "GASTO",
+    val emoji: String = "💰",
+    val timestamp: Long = System.currentTimeMillis()
+)
+
+data class BalanceModel(
+    val id: String = "balance_inicial",
+    val userId: String = "",
+    val balanceInicial: Double = 0.0,
+    val timestamp: Long = System.currentTimeMillis()
+)
+
+# ✅ ExpenseRepository.kt
+
+## 📌 Explicación
+Este archivo implementa un **repositorio de datos** para la gestión de **gastos y balances financieros** en **FlowDaily**.  
+Funciona como **intermediario entre la app y Firebase Firestore**, permitiendo realizar operaciones CRUD completas:
+
+- ➕ Crear  
+- 📖 Leer  
+- ✏️ Actualizar  
+- 🗑️ Eliminar  
+
+Además, incluye:  
+- 🔐 Autenticación de usuario  
+- ⚠️ Manejo de errores  
+- 📝 Logs detallados para depuración  
+
+---
+
+## 🛠 Funcionalidades Clave
+- Guardar nuevos gastos en Firestore.  
+- Obtener lista de gastos del usuario autenticado.  
+- Actualizar gastos existentes.  
+- Eliminar gastos por ID.  
+- Guardar balance inicial o actualizado.  
+- Obtener balance actual del usuario.  
+- Manejo de excepciones con `Result` para mayor robustez.  
+- Logs (`Log.d`, `Log.e`) para seguimiento de operaciones.  
+
+---
+
+## 📂 Código: `ExpenseRepository.kt`
+
+```kotlin
+package com.clmg.applicationflowdaily.data.repository
+import android.util.Log
+import com.clmg.applicationflowdaily.data.firestore.FirebaseModule
+import com.clmg.applicationflowdaily.data.models.BalanceModel
+import com.clmg.applicationflowdaily.data.models.ExpenseModel
+import kotlinx.coroutines.tasks.await
+
+class ExpenseRepository {
+
+    private val db = FirebaseModule.db
+    private val expensesCollection = db.collection("expenses")
+    private val balancesCollection = db.collection("balances")
+
+    companion object {
+        private const val TAG = "ExpenseRepository"
+    }
+
+    private fun getCurrentUserId(): String? {
+        val userId = FirebaseModule.getCurrentUserId()
+        Log.d(TAG, "🔑 Usuario actual ID: $userId")
+        return userId
+    }
+
+    suspend fun saveExpense(expense: ExpenseModel): Result<Unit> {
+        return try {
+            val userId = getCurrentUserId() ?: return Result.failure(Exception("Usuario no autenticado"))
+            val expenseWithUser = expense.copy(userId = userId)
+
+            expensesCollection
+                .document(expense.id)
+                .set(expenseWithUser)
+                .await()
+
+            Result.success(Unit)
+
+        } catch (e: Exception) {
+            Log.e(TAG, "❌ Error guardando gasto: ${e.message}")
+            Result.failure(e)
+        }
+    }
+
+    suspend fun getExpenses(): Result<List<ExpenseModel>> {
+        return try {
+            val userId = getCurrentUserId() ?: return Result.failure(Exception("Usuario no autenticado"))
+
+            val snapshot = expensesCollection
+                .whereEqualTo("userId", userId)
+                .get()
+                .await()
+
+            var expenses = snapshot.documents.mapNotNull {
+                it.toObject(ExpenseModel::class.java)
+            }
+
+            expenses = expenses.sortedByDescending { it.timestamp }
+
+            Result.success(expenses)
+
+        } catch (e: Exception) {
+            Log.e(TAG, "❌ Error obteniendo gastos: ${e.message}")
+            Result.failure(e)
+        }
+    }
+
+    suspend fun updateExpense(expense: ExpenseModel): Result<Unit> {
+        return try {
+            val userId = getCurrentUserId() ?: return Result.failure(Exception("Usuario no autenticado"))
+            val expenseWithUser = expense.copy(userId = userId)
+
+            expensesCollection
+                .document(expense.id)
+                .set(expenseWithUser)
+                .await()
+
+            Result.success(Unit)
+
+        } catch (e: Exception) {
+            Log.e(TAG, "❌ Error actualizando gasto: ${e.message}")
+            Result.failure(e)
+        }
+    }
+
+    suspend fun deleteExpense(expenseId: String): Result<Unit> {
+        return try {
+            expensesCollection
+                .document(expenseId)
+                .delete()
+                .await()
+
+            Result.success(Unit)
+
+        } catch (e: Exception) {
+            Log.e(TAG, "❌ Error eliminando gasto: ${e.message}")
+            Result.failure(e)
+        }
+    }
+
+    suspend fun saveBalance(balance: BalanceModel): Result<Unit> {
+        return try {
+            val userId = getCurrentUserId() ?: return Result.failure(Exception("Usuario no autenticado"))
+
+            val balanceWithUser = balance.copy(
+                id = "balance_$userId",
+                userId = userId
+            )
+
+            balancesCollection
+                .document(balanceWithUser.id)
+                .set(balanceWithUser)
+                .await()
+
+            Result.success(Unit)
+
+        } catch (e: Exception) {
+            Log.e(TAG, "❌ Error guardando balance: ${e.message}")
+            Result.failure(e)
+        }
+    }
+
+    suspend fun getBalance(): Result<BalanceModel?> {
+        return try {
+            val userId = getCurrentUserId() ?: return Result.failure(Exception("Usuario no autenticado"))
+
+            val documentId = "balance_$userId"
+
+            val snapshot = balancesCollection
+                .document(documentId)
+                .get()
+                .await()
+
+            val balance = snapshot.toObject(BalanceModel::class.java)
+
+            Result.success(balance)
+
+        } catch (e: Exception) {
+            Log.e(TAG, "❌ Error obteniendo balance: ${e.message}")
+            Result.failure(e)
+        }
+    }
+}
+---
+
+##📌 TransportScreen.kt
 
 Nota: Este bloque está listo para pegar directamente en tu README.md.
 No se ha omitido nada, es el archivo íntegro.
@@ -663,358 +1028,6 @@ fun TransportRecordCard(
     }
 }
 
-✅ ExpenseRepository.kt
-Explicación
 
-Este archivo implementa un repositorio de datos para la gestión de gastos y balances financieros en FlowDaily.
-Funciona como intermediario entre la app y Firebase Firestore, permitiendo realizar operaciones CRUD completas:
 
-Crear
 
-Leer
-
-Actualizar
-
-Eliminar
-
-Incluye autenticación de usuario, manejo de errores y logs detallados.
-
-Código: ExpenseRepository.kt
-package com.clmg.applicationflowdaily.data.repository
-import android.util.Log
-import com.clmg.applicationflowdaily.data.firestore.FirebaseModule
-import com.clmg.applicationflowdaily.data.models.BalanceModel
-import com.clmg.applicationflowdaily.data.models.ExpenseModel
-import kotlinx.coroutines.tasks.await
-
-class ExpenseRepository {
-
-    private val db = FirebaseModule.db
-    private val expensesCollection = db.collection("expenses")
-    private val balancesCollection = db.collection("balances")
-
-    companion object {
-        private const val TAG = "ExpenseRepository"
-    }
-
-    private fun getCurrentUserId(): String? {
-        val userId = FirebaseModule.getCurrentUserId()
-        Log.d(TAG, "🔑 Usuario actual ID: $userId")
-        return userId
-    }
-
-    suspend fun saveExpense(expense: ExpenseModel): Result<Unit> {
-        return try {
-            val userId = getCurrentUserId() ?: return Result.failure(Exception("Usuario no autenticado"))
-            val expenseWithUser = expense.copy(userId = userId)
-
-            expensesCollection
-                .document(expense.id)
-                .set(expenseWithUser)
-                .await()
-
-            Result.success(Unit)
-
-        } catch (e: Exception) {
-            Log.e(TAG, "❌ Error guardando gasto: ${e.message}")
-            Result.failure(e)
-        }
-    }
-
-    suspend fun getExpenses(): Result<List<ExpenseModel>> {
-        return try {
-            val userId = getCurrentUserId() ?: return Result.failure(Exception("Usuario no autenticado"))
-
-            val snapshot = expensesCollection
-                .whereEqualTo("userId", userId)
-                .get()
-                .await()
-
-            var expenses = snapshot.documents.mapNotNull {
-                it.toObject(ExpenseModel::class.java)
-            }
-
-            expenses = expenses.sortedByDescending { it.timestamp }
-
-            Result.success(expenses)
-
-        } catch (e: Exception) {
-            Log.e(TAG, "❌ Error obteniendo gastos: ${e.message}")
-            Result.failure(e)
-        }
-    }
-
-    suspend fun updateExpense(expense: ExpenseModel): Result<Unit> {
-        return try {
-            val userId = getCurrentUserId() ?: return Result.failure(Exception("Usuario no autenticado"))
-            val expenseWithUser = expense.copy(userId = userId)
-
-            expensesCollection
-                .document(expense.id)
-                .set(expenseWithUser)
-                .await()
-
-            Result.success(Unit)
-
-        } catch (e: Exception) {
-            Log.e(TAG, "❌ Error actualizando gasto: ${e.message}")
-            Result.failure(e)
-        }
-    }
-
-    suspend fun deleteExpense(expenseId: String): Result<Unit> {
-        return try {
-            expensesCollection
-                .document(expenseId)
-                .delete()
-                .await()
-
-            Result.success(Unit)
-
-        } catch (e: Exception) {
-            Log.e(TAG, "❌ Error eliminando gasto: ${e.message}")
-            Result.failure(e)
-        }
-    }
-
-    suspend fun saveBalance(balance: BalanceModel): Result<Unit> {
-        return try {
-            val userId = getCurrentUserId() ?: return Result.failure(Exception("Usuario no autenticado"))
-
-            val balanceWithUser = balance.copy(
-                id = "balance_$userId",
-                userId = userId
-            )
-
-            balancesCollection
-                .document(balanceWithUser.id)
-                .set(balanceWithUser)
-                .await()
-
-            Result.success(Unit)
-
-        } catch (e: Exception) {
-            Log.e(TAG, "❌ Error guardando balance: ${e.message}")
-            Result.failure(e)
-        }
-    }
-
-    suspend fun getBalance(): Result<BalanceModel?> {
-        return try {
-            val userId = getCurrentUserId() ?: return Result.failure(Exception("Usuario no autenticado"))
-
-            val documentId = "balance_$userId"
-
-            val snapshot = balancesCollection
-                .document(documentId)
-                .get()
-                .await()
-
-            val balance = snapshot.toObject(BalanceModel::class.java)
-
-            Result.success(balance)
-
-        } catch (e: Exception) {
-            Log.e(TAG, "❌ Error obteniendo balance: ${e.message}")
-            Result.failure(e)
-        }
-    }
-}
-
-✅ ExpenseModel.kt
-Explicación
-
-Este archivo contiene los modelos de datos usados en el módulo de Finanzas:
-
-ExpenseModel → Representa un gasto o ingreso.
-
-BalanceModel → Representa el balance inicial del usuario.
-
-Están diseñados para integrarse con Firebase Firestore y permiten ordenamiento, registro y análisis temporal.
-
-Código: ExpenseModel.kt
-package com.clmg.applicationflowdaily.data.models
-
-data class ExpenseModel(
-    val id: String = "",
-    val userId: String = "",
-    val monto: Double = 0.0,
-    val descripcion: String = "",
-    val categoria: String = "",
-    val fecha: Long = System.currentTimeMillis(),
-    val tipo: String = "GASTO",
-    val emoji: String = "💰",
-    val timestamp: Long = System.currentTimeMillis()
-)
-
-data class BalanceModel(
-    val id: String = "balance_inicial",
-    val userId: String = "",
-    val balanceInicial: Double = 0.0,
-    val timestamp: Long = System.currentTimeMillis()
-)
-
-✅ ExpenseViewModel.kt
-Explicación
-
-Este ViewModel maneja toda la lógica de:
-
-Gastos
-
-Balance
-
-Estados de carga
-
-Errores
-
-Mensajes de éxito
-
-Coordina las operaciones entre la UI y el repositorio.
-
-Código: ExpenseViewModel.kt
-package com.clmg.applicationflowdaily.ui.viewmodel
-import android.util.Log
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.clmg.applicationflowdaily.data.models.BalanceModel
-import com.clmg.applicationflowdaily.data.models.ExpenseModel
-import com.clmg.applicationflowdaily.data.repository.ExpenseRepository
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
-
-class ExpenseViewModel : ViewModel() {
-
-    private val repository = ExpenseRepository()
-
-    private val _expenses = MutableStateFlow<List<ExpenseModel>>(emptyList())
-    val expenses: StateFlow<List<ExpenseModel>> = _expenses.asStateFlow()
-
-    private val _balance = MutableStateFlow<BalanceModel?>(null)
-    val balance: StateFlow<BalanceModel?> = _balance.asStateFlow()
-
-    private val _loading = MutableStateFlow(false)
-    val loading: StateFlow<Boolean> = _loading.asStateFlow()
-
-    private val _error = MutableStateFlow<String?>(null)
-    val error: StateFlow<String?> = _error.asStateFlow()
-
-    private val _operationSuccess = MutableStateFlow<String?>(null)
-    val operationSuccess: StateFlow<String?> = _operationSuccess.asStateFlow()
-
-    companion object {
-        private const val TAG = "ExpenseViewModel"
-    }
-
-    init {
-        loadExpenses()
-        loadBalance()
-    }
-
-    fun loadExpenses() {
-        viewModelScope.launch {
-            try {
-                _loading.value = true
-                _error.value = null
-
-                repository.getExpenses().fold(
-                    onSuccess = { _expenses.value = it },
-                    onFailure = { _error.value = it.message }
-                )
-            } finally {
-                _loading.value = false
-            }
-        }
-    }
-
-    fun loadBalance() {
-        viewModelScope.launch {
-            try {
-                repository.getBalance().fold(
-                    onSuccess = { _balance.value = it },
-                    onFailure = { Log.e(TAG, "Error balance: ${it.message}") }
-                )
-            } catch (_: Exception) {}
-        }
-    }
-
-    fun saveExpense(expense: ExpenseModel, onSuccess: () -> Unit = {}) {
-        viewModelScope.launch {
-            try {
-                _loading.value = true
-                _error.value = null
-
-                repository.saveExpense(expense).fold(
-                    onSuccess = {
-                        _operationSuccess.value = "Gasto guardado"
-                        loadExpenses()
-                        onSuccess()
-                    },
-                    onFailure = { _error.value = it.message }
-                )
-            } finally { _loading.value = false }
-        }
-    }
-
-    fun updateExpense(expense: ExpenseModel, onSuccess: () -> Unit = {}) {
-        viewModelScope.launch {
-            try {
-                _loading.value = true
-
-                repository.updateExpense(expense).fold(
-                    onSuccess = {
-                        _operationSuccess.value = "Gasto actualizado"
-                        loadExpenses()
-                        onSuccess()
-                    },
-                    onFailure = { _error.value = it.message }
-                )
-            } finally { _loading.value = false }
-        }
-    }
-
-    fun deleteExpense(expenseId: String, onSuccess: () -> Unit = {}) {
-        viewModelScope.launch {
-            try {
-                _loading.value = true
-
-                repository.deleteExpense(expenseId).fold(
-                    onSuccess = {
-                        _operationSuccess.value = "Gasto eliminado"
-                        loadExpenses()
-                        onSuccess()
-                    },
-                    onFailure = { _error.value = it.message }
-                )
-            } finally { _loading.value = false }
-        }
-    }
-
-    fun saveBalance(balanceInicial: Double, onSuccess: () -> Unit = {}) {
-        viewModelScope.launch {
-            try {
-                _loading.value = true
-
-                val balanceModel = BalanceModel(balanceInicial = balanceInicial)
-
-                repository.saveBalance(balanceModel).fold(
-                    onSuccess = {
-                        _operationSuccess.value = "Balance actualizado"
-                        loadBalance()
-                        onSuccess()
-                    },
-                    onFailure = { _error.value = it.message }
-                )
-            } finally { _loading.value = false }
-        }
-    }
-
-    fun clearError() {
-        _error.value = null
-    }
-
-    fun clearSuccess() {
-        _operationSuccess.value = null
-    }
-}
