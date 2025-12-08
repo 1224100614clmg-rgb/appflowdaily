@@ -374,6 +374,7 @@ class ExpenseViewModel : ViewModel() {
         _operationSuccess.value = null
     }
 }
+```
 
 # ✅ ExpenseModel.kt
 
@@ -426,12 +427,15 @@ data class ExpenseModel(
     val timestamp: Long = System.currentTimeMillis()
 )
 
+
 data class BalanceModel(
     val id: String = "balance_inicial",
     val userId: String = "",
     val balanceInicial: Double = 0.0,
     val timestamp: Long = System.currentTimeMillis()
 )
+```
+
 
 # ✅ ExpenseRepository.kt
 
@@ -606,6 +610,7 @@ class ExpenseRepository {
         }
     }
 }
+```
 ---
 
 ##📌 TransportScreen.kt
@@ -617,7 +622,7 @@ No se ha omitido nada, es el archivo íntegro.
 //Este código implementa la pantalla completa de Transporte en la aplicación FlowDaily.
 //Es una pantalla compleja que combina Google Maps para seleccionar rutas con un historial
 //de rutas guardadas, utilizando el patrón de diseño MVVM con un ViewModel especializado.
-
+```kotlin
 package com.clmg.applicationflowdaily.ui.screens
 
 import android.Manifest
@@ -1027,10 +1032,12 @@ fun TransportRecordCard(
         }
     }
 }
+```
 
 Centraliza la configuración de Firebase en un único módulo (FirebaseModule) que:
 - Inicializa Firestore y Auth con instancias únicas (patrón singleton).
 
+```kotlin
 package com.clmg.applicationflowdaily.data.firestore
 
 import android.util.Log
@@ -1085,9 +1092,10 @@ object FirebaseModule {
         return auth.currentUser?.email
     }
 }
+```
 
 Crea una clase (PreferencesDataStore) que maneje el almacenamiento local de preferencias de usuario usando Jetpack DataStore
-
+```kotlin
 package com.clmg.applicationflowdaily.data.local
 
 import android.content.Context
@@ -1141,8 +1149,11 @@ class PreferencesDataStore(private val context: Context) {
         }
     }
 }
+```
 
 Define un modelo de datos (DailySession) que represente una sesión diaria o registro de actividad, con las siguientes características:
+
+```kotlin
 package com.clmg.applicationflowdaily.data.models
 
 // Modelo de datos DailySession que representa una sesión diaria o registro de actividad:
@@ -1157,8 +1168,11 @@ data class DailySession(
     val description: String = "",
     val date: Long = System.currentTimeMillis()
 )
+```
 
 Define un modelo de datos (ReminderModel) que represente un recordatorio o tarea programada
+
+```kotlin
 package com.clmg.applicationflowdaily.data.models
 
 // Modelo de datos ReminderModel que representa un recordatorio o tarea programada:
@@ -1179,9 +1193,12 @@ data class ReminderModel(
     val timestamp: Long = System.currentTimeMillis(), // Para ordenar
     val isCompleted: Boolean = false // ✅ Controla si el usuario lo marcó como completado
 )
+```
 
 📌 Instrucción
 Implementa un BroadcastReceiver (ReminderBroadcastReceiver) para gestionar el ciclo completo de notificaciones programadas
+
+```kotlin
 package com.clmg.applicationflowdaily.data.notificacion
 
 import android.app.NotificationManager
@@ -1327,10 +1344,12 @@ class ReminderBroadcastReceiver : BroadcastReceiver() {
         Log.d(TAG, "Notificacion cerrada: $reminderId")
     }
 }
+```
 
 
 Implementa un gestor de notificaciones (ReminderNotificationManager) que permita programar, actualizar y cancelar recordatorios
 
+```kotlin
 package com.clmg.applicationflowdaily.data.notificacion
 
 import android.app.AlarmManager
@@ -1497,9 +1516,11 @@ class ReminderNotificationManager(private val context: Context) {
         }
     }
 }
+```
 
 - Crea un repositorio (ReminderRepository) que maneje los recordatorios en Firestore con operaciones CRUD: guardar, obtener, actualizar, marcar completado, posponer y eliminar.
 
+```kotlin
 package com.clmg.applicationflowdaily.data.repository
 
 import android.util.Log
@@ -1646,14 +1667,15 @@ class ReminderRepository {
         }
     }
 }
+```
 
 # AsistenciaScreen - Gestión de Recordatorios
 
 Pantalla para gestionar recordatorios con notificaciones. Permite crear, editar y eliminar recordatorios categorizados (trabajo, personal, salud, etc.) con fechas y horas específicas.
 
 ## Código Principal
-```kotlin
 
+```kotlin
 package com.clmg.applicationflowdaily.ui.screens
 
 import android.Manifest
@@ -3112,7 +3134,6 @@ fun CategorySelectionDialog(
         }
     }
 }
-
 ```
 
 ## Características
