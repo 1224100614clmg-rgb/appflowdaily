@@ -2,7 +2,7 @@
 
 ## 📝 Resumen
 FlowDaily es una aplicación diseñada para ayudar a las personas con sus rutinas diarias.  
-Permite registrar, organizar y visualizar actividades importantes como transporte, gastos, tareas, recordatorios y hábitos.  
+Permite registrar, organizar y visualizar actividades importantes como transporte, gastos, tareas, recordatorios y hábitos. 
 
 En pocas palabras, FlowDaily ayuda a mejorar el control y la eficiencia de las actividades diarias mediante un registro claro, moderno y estructurado.
 
